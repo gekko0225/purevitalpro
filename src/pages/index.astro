@@ -3,13 +3,273 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout
-title="Pure Vital Pro"
-description="Salud, deporte y nutrición para transformar tu vida."
+  title="Pure Vital Pro | Salud, hábitos y bienestar"
+  description="Pure Vital Pro te ayuda a transformar tu salud con retos guiados, hábitos sostenibles, nutrición y acompañamiento."
 >
-<main style="padding:5rem;text-align:center;">
-<h1>Pure Vital Pro</h1>
-<p>Bienvenido a nuestra plataforma.</p>
+  <main class="home">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">PURE VITAL PRO</p>
 
-<a href="/retodetox21">Ver Reto Detox 21</a>
-</main>
+        <h1>
+          Transforma tu salud con hábitos reales
+        </h1>
+
+        <p class="subtitle">
+          Retos guiados, bienestar, nutrición y acompañamiento para ayudarte a
+          recuperar energía, disciplina y equilibrio.
+        </p>
+
+        <div class="actions">
+          <a href="/retodetox21" class="btn-primary">
+            Ver Reto Detox 21
+          </a>
+
+          <a href="#programas" class="btn-secondary">
+            Conocer programas
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="programas" class="programs">
+      <div class="container">
+        <p class="section-kicker">Programa activo</p>
+        <h2>Reto Detox 21</h2>
+
+        <div class="program-card">
+          <div>
+            <span class="tag">21 días</span>
+            <h3>Reinicia tu cuerpo y recupera tu energía</h3>
+            <p>
+              Un reto diseñado para ayudarte a mejorar hábitos, sentirte más
+              ligera/o, recuperar enfoque y avanzar con acompañamiento.
+            </p>
+          </div>
+
+          <a href="/retodetox21" class="btn-primary">
+            Ver detalles
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="pillars">
+      <div class="container">
+        <p class="section-kicker">Nuestra base</p>
+        <h2>Lo que construiremos contigo</h2>
+
+        <div class="grid">
+          <article>
+            <span>🥗</span>
+            <h3>Nutrición práctica</h3>
+            <p>Hábitos simples y sostenibles para comer mejor.</p>
+          </article>
+
+          <article>
+            <span>🏋️</span>
+            <h3>Movimiento</h3>
+            <p>Ejercicio adaptado para mejorar energía y disciplina.</p>
+          </article>
+
+          <article>
+            <span>🧠</span>
+            <h3>Mentalidad</h3>
+            <p>Acompañamiento para mantener enfoque durante el proceso.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #020505;
+    color: #fff;
+  }
+
+  .container {
+    width: min(1120px, calc(100% - 2rem));
+    margin: auto;
+  }
+
+  .home {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(44, 247, 231, 0.18), transparent 34rem),
+      radial-gradient(circle at 80% 10%, rgba(44, 247, 231, 0.08), transparent 28rem),
+      linear-gradient(180deg, #020505, #071010, #020505);
+    overflow: hidden;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  .hero {
+    min-height: 90vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .eyebrow,
+  .section-kicker {
+    color: #2cf7e7;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    max-width: 980px;
+    margin: 1rem auto;
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    max-width: 720px;
+    margin: 0 auto;
+    color: #d7eceb;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 900;
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+
+  .btn-primary {
+    background: #2cf7e7;
+    color: #001111;
+    box-shadow: 0 0 28px rgba(44, 247, 231, 0.35);
+  }
+
+  .btn-secondary {
+    border: 1px solid rgba(44, 247, 231, 0.35);
+    color: #2cf7e7;
+  }
+
+  .btn-primary:hover,
+  .btn-secondary:hover {
+    transform: translateY(-3px);
+  }
+
+  h2 {
+    margin: 0 0 2rem;
+    text-align: center;
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .section-kicker {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .program-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem;
+    border: 1px solid rgba(44, 247, 231, 0.2);
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.045);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  }
+
+  .tag {
+    display: inline-flex;
+    margin-bottom: 1rem;
+    padding: 0.45rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(44, 247, 231, 0.12);
+    color: #2cf7e7;
+    font-weight: 900;
+  }
+
+  .program-card h3 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(1.6rem, 3vw, 2.6rem);
+  }
+
+  .program-card p {
+    max-width: 640px;
+    margin: 0;
+    color: #c4dddd;
+    line-height: 1.7;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .grid article {
+    padding: 2rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.045);
+    border: 1px solid rgba(44, 247, 231, 0.14);
+  }
+
+  .grid span {
+    font-size: 2rem;
+  }
+
+  .grid h3 {
+    margin: 1rem 0 0.5rem;
+    color: #2cf7e7;
+  }
+
+  .grid p {
+    margin: 0;
+    color: #c4dddd;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      min-height: auto;
+      padding-top: 6rem;
+    }
+
+    .program-card {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
