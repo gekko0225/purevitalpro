@@ -1,0 +1,50 @@
+---
+const phone = "000000000000";
+const url = `https://wa.me/${phone}?text=QUIERO`;
+---
+
+<section class="hero">
+  <div class="container center">
+    <p class="mini">PURE VITAL PRO</p>
+
+    <h1>Reto Reset 21</h1>
+
+    <p class="subtitle">
+      Reinicia tu cuerpo y recupera tu energía en solo 21 días.
+    </p>
+
+    <a href={url} class="btn" target="_blank">
+      Escríbeme QUIERO
+    </a>
+  </div>
+</section>
+
+<style>
+.hero {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background:
+    radial-gradient(circle, rgba(0,255,220,.15), transparent 40%),
+    #030707;
+}
+
+.mini {
+  color: #21f5e3;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: clamp(3rem, 10vw, 8rem);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  max-width: 700px;
+  margin: 1rem auto 2rem;
+  font-size: 1.2rem;
+  color: #d6ecec;
+}
+</style>

@@ -1,0 +1,29 @@
+<section>
+  <div class="container">
+    <h2 class="title">¿Te identificas con esto?</h2>
+
+    <div class="grid">
+      <div>Falta de energía</div>
+      <div>Azúcar elevada</div>
+      <div>Inflamación</div>
+      <div>Exceso de peso</div>
+      <div>Malos hábitos</div>
+      <div>Desmotivación</div>
+    </div>
+  </div>
+</section>
+
+<style>
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:1rem;
+}
+
+.grid div{
+padding:2rem;
+border:1px solid rgba(255,255,255,.08);
+border-radius:18px;
+text-align:center;
+}
+</style>
