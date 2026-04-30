@@ -28,6 +28,52 @@ const { title, description } = Astro.props;
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <link rel="manifest" href="/site.webmanifest" />
 <meta name="theme-color" content="#020505" />
+<script>
+  const countdown = document.querySelector("[data-countdown]");
+
+  if (countdown instanceof HTMLElement) {
+    const targetDate = new Date(countdown.dataset.countdown || "").getTime();
+
+    const daysEl = countdown.querySelector("[data-days]");
+    const hoursEl = countdown.querySelector("[data-hours]");
+    const minutesEl = countdown.querySelector("[data-minutes]");
+    const secondsEl = countdown.querySelector("[data-seconds]");
+
+    const pad = (value) => String(value).padStart(2, "0");
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance <= 0) {
+        countdown.innerHTML = `
+          <p class="countdown-label">🔥 El reto ya inició</p>
+          <div class="countdown-grid">
+            <div><strong>00</strong><span>Días</span></div>
+            <div><strong>00</strong><span>Horas</span></div>
+            <div><strong>00</strong><span>Min</span></div>
+            <div><strong>00</strong><span>Seg</span></div>
+          </div>
+        `;
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance / (1000 * 60 * 60)) % 24);
+      const minutes = Math.floor((distance / (1000 * 60)) % 60);
+      const seconds = Math.floor((distance / 1000) % 60);
+
+      if (daysEl) daysEl.textContent = pad(days);
+      if (hoursEl) hoursEl.textContent = pad(hours);
+      if (minutesEl) minutesEl.textContent = pad(minutes);
+      if (secondsEl) secondsEl.textContent = pad(seconds);
+    };
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  }
+</script>
+
   </head>
 
   <body>
