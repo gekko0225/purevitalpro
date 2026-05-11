@@ -1,0 +1,97 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Gracias | Pure Vital Pro"
+  description="Tu guía gratuita está en camino a tu correo."
+>
+  <main class="thank-you">
+    <section class="card">
+      <p class="eyebrow">PURE VITAL PRO</p>
+
+      <h1>¡Ya estás dentro!</h1>
+
+      <p class="subtitle">
+        Tu guía gratuita está en camino a tu correo.
+      </p>
+
+      <div class="steps">
+        <p>Revisa tu bandeja de entrada en los próximos minutos.</p>
+        <p>Si no la ves, revisa Promociones o Spam.</p>
+        <p>Mueve nuestro correo a Principal para recibir los próximos consejos.</p>
+      </div>
+
+      <a href="/" class="btn-primary">
+        Volver al inicio
+      </a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(body) {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #020505;
+    color: #fff;
+  }
+
+  .thank-you {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    background:
+      radial-gradient(circle at top left, rgba(44, 247, 231, 0.18), transparent 34rem),
+      linear-gradient(180deg, #020505, #071010, #020505);
+  }
+
+  .card {
+    max-width: 640px;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(44, 247, 231, 0.18);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+  }
+
+  .eyebrow {
+    color: #2cf7e7;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    margin: 1rem 0;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    color: #d7eceb;
+    font-size: 1.2rem;
+    line-height: 1.7;
+  }
+
+  .steps {
+    margin: 2rem 0;
+    color: #c4dddd;
+    line-height: 1.7;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    background: #2cf7e7;
+    color: #001111;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 0 28px rgba(44, 247, 231, 0.35);
+  }
+</style>

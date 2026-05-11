@@ -1,0 +1,278 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Guía Gratis | Pure Vital Pro"
+  description="Recibe gratis una guía práctica de hábitos saludables para recuperar energía, disciplina y equilibrio."
+>
+  <main class="guide-page">
+    <section class="guide-hero">
+      <div class="container">
+        <div class="content">
+          <p class="eyebrow">GUÍA GRATUITA</p>
+
+          <h1>Elimina lo que frena tu salud y tu energía</h1>
+
+          <p class="subtitle">
+            Descarga “La Vía Negativa”: una guía breve para mejorar tu bienestar quitando primero lo que te está saboteando.
+          </p>
+
+          <ul class="benefits">
+            <li>Por qué añadir mas hábitos no siempre funciona.</li>
+            <li>Qué significa aplicar la vía negativa en salud y bienestar.</li>
+            <li>Cómo eliminar interferencias que dañan tu energía.</li>
+            <li>Por qué quitar lo negativo puede tener más impacto que añadir lo positivo.</li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <h2>Descarga tu guía gratis</h2>
+
+          <p>
+            Déjanos tu correo y te enviaremos la guía a tu email.
+          </p>
+
+          <form
+            class="lead-form"
+            method="post"
+            accept-charset="UTF-8"
+            action="https://www.aweber.com/scripts/addlead.pl"
+          >
+            <div style="display: none;">
+              <input type="hidden" name="meta_web_form_id" value="437450018" />
+              <input type="hidden" name="meta_split_id" value="" />
+              <input type="hidden" name="listname" value="awlist6954858" />
+              <input
+                type="hidden"
+                name="redirect"
+                value="https://purevitalpro.online/thank-you"
+              />
+              <input
+                type="hidden"
+                name="meta_redirect_onlist"
+                value="https://purevitalpro.online/thank-you"
+              />
+              <input type="hidden" name="meta_adtracking" value="pure-vital-pro" />
+              <input type="hidden" name="meta_message" value="1" />
+              <input type="hidden" name="meta_required" value="email" />
+              <input type="hidden" name="meta_tooltip" value="" />
+            </div>
+
+            <label for="email">Tu correo electrónico</label>
+
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Tu mejor correo"
+              required
+            />
+
+            <button type="submit">
+              Descargar guía
+            </button>
+
+            <p class="form-note">
+              Gratis. Sin spam. Puedes salir cuando quieras.
+            </p>
+
+            <div style="display: none;">
+              <img
+                src="https://forms.aweber.com/form/displays.htm?id=LMzsLKwMDIwc"
+                alt=""
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #020505;
+    color: #fff;
+  }
+
+  .guide-page {
+    min-height: 100vh;
+    background:
+      radial-gradient(circle at top left, rgba(44, 247, 231, 0.18), transparent 34rem),
+      radial-gradient(circle at 85% 10%, rgba(44, 247, 231, 0.08), transparent 28rem),
+      linear-gradient(180deg, #020505, #071010, #020505);
+  }
+
+  .guide-hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 4rem 1rem;
+  }
+
+  .container {
+    width: min(1080px, 100%);
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .content,
+  .form-card {
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.055);
+    border: 1px solid rgba(44, 247, 231, 0.16);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+  }
+
+  .content {
+    padding: 3rem;
+  }
+
+  .form-card {
+    padding: 2.5rem;
+  }
+
+  .eyebrow {
+    margin: 0 0 1rem;
+    color: #2cf7e7;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    margin: 0 0 1.25rem;
+    font-size: clamp(3rem, 7vw, 5.8rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    margin: 0;
+    color: #d7eceb;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .benefits {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .benefits li {
+    position: relative;
+    padding-left: 2rem;
+    color: #c4dddd;
+    line-height: 1.5;
+  }
+
+  .benefits li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2cf7e7;
+    font-weight: 900;
+  }
+
+  .form-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+
+  .form-card > p {
+    margin: 0 0 1.5rem;
+    color: #c4dddd;
+    line-height: 1.6;
+  }
+
+  :global(.lead-form label) {
+    display: block;
+    margin-bottom: 0.75rem;
+    color: #dffefe;
+    font-weight: 800;
+  }
+
+  :global(.lead-form input[type="email"]) {
+    width: 100%;
+    height: 58px;
+    padding: 0 1rem;
+    border: 1px solid rgba(44, 247, 231, 0.22);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    font-size: 1rem;
+    outline: none;
+  }
+
+  :global(.lead-form input[type="email"]::placeholder) {
+    color: #b7d7d7;
+  }
+
+  :global(.lead-form input[type="email"]:focus) {
+    border-color: #2cf7e7;
+    box-shadow: 0 0 0 4px rgba(44, 247, 231, 0.12);
+  }
+
+  :global(.lead-form button) {
+    width: 100%;
+    height: 58px;
+    margin-top: 1rem;
+    border: 0;
+    border-radius: 999px;
+    background: #2cf7e7;
+    color: #001111;
+    font-weight: 900;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+  }
+
+  :global(.lead-form button:hover) {
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px rgba(44, 247, 231, 0.35);
+  }
+
+  :global(.form-note) {
+    margin: 1rem 0 0;
+    color: #c4dddd;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  @media (max-width: 860px) {
+    .guide-hero {
+      padding: 2rem 1rem;
+      place-items: start center;
+    }
+
+    .container {
+      grid-template-columns: 1fr;
+    }
+
+    .content,
+    .form-card {
+      padding: 2rem;
+      border-radius: 26px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 14vw, 4.5rem);
+    }
+  }
+</style>
