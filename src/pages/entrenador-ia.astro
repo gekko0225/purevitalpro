@@ -1,0 +1,363 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Empieza a ganar fuerza desde casa con un entrenador personal impulsado por IA, gratis"
+  description="Obtén gratis acceso a un entrenador personal impulsado por IA que crea rutinas adaptadas a tu nivel y tiempo disponible."
+>
+  <main class="landing">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container">
+        <p class="eyebrow">PURE VITAL PRO</p>
+
+        <h1>
+          Empieza a ganar fuerza desde casa con un entrenador personal impulsado por IA
+        </h1>
+
+        <p class="subtitle">
+          Recibe gratis acceso a una herramienta que crea rutinas adaptadas a tu nivel,
+          tu tiempo disponible y el equipo que tengas en casa.
+        </p>
+
+        <div class="form-card">
+          <form
+            method="post"
+            action="https://www.aweber.com/scripts/addlead.pl"
+            accept-charset="UTF-8"
+          >
+            <input type="hidden" name="meta_web_form_id" value="882549129" />
+            <input type="hidden" name="meta_split_id" value="" />
+            <input type="hidden" name="listname" value="awlist6955267" />
+
+            <input
+              type="hidden"
+              name="redirect"
+              value="https://purevitalpro.online/gracias-entrenador-ia"
+            />
+
+            <input
+              type="hidden"
+              name="meta_redirect_onlist"
+              value="https://www.aweber.com/thankyou.htm?m=default"
+            />
+
+            <input type="hidden" name="meta_adtracking" value="web-form-entrenador-ia" />
+            <input type="hidden" name="meta_message" value="1" />
+            <input type="hidden" name="meta_required" value="email" />
+            <input type="hidden" name="meta_tooltip" value="" />
+
+            <input
+              type="hidden"
+              name="tag_118731248"
+              value="entrenador-ia"
+            />
+
+            <label for="email" class="sr-only">Correo electrónico</label>
+
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="Introduce tu mejor correo"
+              required
+            />
+
+            <button type="submit">
+              QUIERO MI ENTRENADOR GRATIS
+            </button>
+          </form>
+
+          <p class="trust">
+            No enviamos spam. Puedes darte de baja en cualquier momento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <h2>¿Qué obtendrás?</h2>
+
+        <div class="benefits-grid">
+          <article>✅ Ideal para principiantes</article>
+          <article>✅ Entrena con peso corporal o equipo básico</article>
+          <article>✅ Rutinas adaptadas a tu nivel actual</article>
+          <article>✅ Progresión segura y gradual</article>
+          <article>✅ Disponible 24/7</article>
+        </div>
+      </div>
+    </section>
+
+    <section class="audience">
+      <div class="container audience-grid">
+        <div class="audience-card positive">
+          <h2>¿Para quién es?</h2>
+
+          <ul>
+            <li>Personas que nunca han entrenado.</li>
+            <li>Personas que quieren empezar desde casa.</li>
+            <li>Personas que tienen poco tiempo.</li>
+            <li>Personas que buscan ganar fuerza de forma segura.</li>
+          </ul>
+        </div>
+
+        <div class="audience-card negative">
+          <h2>¿Para quién NO es?</h2>
+
+          <ul>
+            <li>Atletas avanzados.</li>
+            <li>Personas que buscan programas de competición.</li>
+            <li>Personas que esperan resultados sin esfuerzo.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Empieza hoy mismo</h2>
+
+        <p>
+          Recibe acceso inmediato y descubre cómo entrenar de forma inteligente.
+        </p>
+
+        <a href="#email" class="btn-primary">
+          QUIERO MI ENTRENADOR GRATIS
+        </a>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #020505;
+    color: white;
+  }
+
+  .container {
+    width: min(1200px, calc(100% - 2rem));
+    margin: auto;
+  }
+
+  .landing {
+    overflow: hidden;
+    background:
+      radial-gradient(circle at top left, rgba(44, 247, 231, 0.18), transparent 35rem),
+      radial-gradient(circle at 80% 10%, rgba(44, 247, 231, 0.08), transparent 25rem),
+      linear-gradient(180deg, #020505, #071010, #020505);
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    padding: 5rem 0;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 70px 70px;
+    mask-image: radial-gradient(circle, black, transparent 75%);
+  }
+
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    color: #2cf7e7;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    max-width: 900px;
+    margin: 1rem auto;
+    font-size: clamp(2.8rem, 7vw, 6rem);
+    line-height: 0.95;
+  }
+
+  .subtitle {
+    max-width: 760px;
+    margin: 0 auto 2rem;
+    color: #d7eceb;
+    font-size: 1.2rem;
+  }
+
+  .form-card {
+    max-width: 650px;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(44, 247, 231, 0.2);
+    backdrop-filter: blur(12px);
+  }
+
+  form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem;
+    border-radius: 999px;
+    border: 1px solid rgba(44, 247, 231, 0.25);
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+  }
+
+  input::placeholder {
+    color: #9fbdbc;
+  }
+
+  button,
+  .btn-primary {
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    background: #2cf7e7;
+    color: #001111;
+    font-weight: 900;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+    transition: 0.2s ease;
+  }
+
+  button:hover,
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 28px rgba(44, 247, 231, 0.35);
+  }
+
+  .trust {
+    margin-top: 1rem;
+    color: #b9d7d6;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    line-height: 1;
+  }
+
+  .benefits-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .benefits-grid article {
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    padding: 1.5rem;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(44, 247, 231, 0.15);
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, 480px));
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .audience-card {
+    min-height: 100%;
+    padding: 2rem;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(44, 247, 231, 0.15);
+    backdrop-filter: blur(12px);
+  }
+
+  .audience-card h2 {
+    margin-top: 0;
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+  }
+
+  .audience-card ul {
+    padding-left: 1.2rem;
+    color: #d7eceb;
+  }
+
+  .audience-card li {
+    margin-bottom: 0.8rem;
+  }
+
+  .positive {
+    border-color: rgba(44, 247, 231, 0.35);
+    box-shadow: 0 0 25px rgba(44, 247, 231, 0.08);
+  }
+
+  .negative {
+    border-color: rgba(255, 120, 120, 0.25);
+  }
+
+  .cta {
+    text-align: center;
+    padding-bottom: 7rem;
+  }
+
+  .cta p {
+    color: #d7eceb;
+    margin-bottom: 2rem;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+    }
+
+    form {
+      flex-direction: column;
+    }
+
+    input,
+    button {
+      width: 100%;
+    }
+
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

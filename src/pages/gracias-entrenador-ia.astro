@@ -1,0 +1,274 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Acceso enviado | Pure Vital Pro"
+  description="Tu acceso al entrenador personal impulsado por IA ha sido enviado correctamente."
+>
+  <main class="thank-you">
+    <section class="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container">
+        <p class="eyebrow">PURE VITAL PRO</p>
+
+        <div class="card">
+          <span class="icon">🎉</span>
+
+          <h1>¡Todo listo!</h1>
+
+          <p class="subtitle">
+            Tu acceso al entrenador personal impulsado por IA ha sido enviado a
+            tu correo.
+          </p>
+
+          <div class="steps">
+            <article>
+              <strong>01</strong>
+              <p>Revisa tu bandeja de entrada.</p>
+            </article>
+
+            <article>
+              <strong>02</strong>
+              <p>Busca un correo de Pure Vital Pro.</p>
+            </article>
+
+            <article>
+              <strong>03</strong>
+              <p>Si no aparece, revisa promociones o spam.</p>
+            </article>
+          </div>
+
+          <div class="next">
+            <h2>Mientras tanto...</h2>
+
+            <p>
+              Durante las próximas semanas recibirás recursos gratuitos para
+              ayudarte a mejorar tu entrenamiento, tus hábitos y tu bienestar.
+            </p>
+
+            <ul>
+              <li>Entrenamiento para principiantes</li>
+              <li>Hábitos saludables</li>
+              <li>Nutrición práctica</li>
+              <li>Herramientas impulsadas por IA</li>
+            </ul>
+          </div>
+
+          <a href="/" class="btn-primary">
+            Visitar Pure Vital Pro
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  :global(*) {
+    box-sizing: border-box;
+  }
+
+  :global(body) {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    background: #020505;
+    color: #fff;
+  }
+
+  .container {
+    width: min(980px, calc(100% - 2rem));
+    margin: auto;
+  }
+
+  .thank-you {
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+      radial-gradient(circle at top left, rgba(44, 247, 231, 0.18), transparent 35rem),
+      radial-gradient(circle at 80% 10%, rgba(44, 247, 231, 0.08), transparent 25rem),
+      linear-gradient(180deg, #020505, #071010, #020505);
+  }
+
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 70px 70px;
+    mask-image: radial-gradient(circle, black, transparent 75%);
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow {
+    margin-bottom: 1rem;
+    color: #2cf7e7;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+  }
+
+  .card {
+    padding: clamp(2rem, 5vw, 4rem);
+    border-radius: 34px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(44, 247, 231, 0.2);
+    box-shadow:
+      inset 0 0 28px rgba(44, 247, 231, 0.045),
+      0 24px 70px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(14px);
+  }
+
+  .icon {
+    display: inline-grid;
+    place-items: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.2rem;
+    border-radius: 24px;
+    background: rgba(44, 247, 231, 0.12);
+    border: 1px solid rgba(44, 247, 231, 0.28);
+    font-size: 2.2rem;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 0.9;
+    text-transform: uppercase;
+  }
+
+  .subtitle {
+    max-width: 700px;
+    margin: 1.2rem auto 2rem;
+    color: #d7eceb;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+  }
+
+  .steps article,
+  .next {
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(44, 247, 231, 0.14);
+  }
+
+  .steps article {
+    padding: 1.3rem;
+  }
+
+  .steps strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #2cf7e7;
+    font-size: 1.5rem;
+  }
+
+  .steps p {
+    margin: 0;
+    color: #cce3e2;
+    line-height: 1.5;
+  }
+
+  .next {
+    margin: 2rem 0;
+    padding: 2rem;
+    text-align: left;
+  }
+
+  .next h2 {
+    margin: 0 0 0.8rem;
+    color: #fff;
+    font-size: clamp(1.7rem, 4vw, 2.6rem);
+    text-align: center;
+  }
+
+  .next p {
+    max-width: 720px;
+    margin: 0 auto 1.2rem;
+    color: #d7eceb;
+    line-height: 1.7;
+    text-align: center;
+  }
+
+  .next ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .next li {
+    padding: 0.9rem 1rem;
+    border-radius: 16px;
+    background: rgba(44, 247, 231, 0.08);
+    color: #eaffff;
+    font-weight: 700;
+  }
+
+  .next li::before {
+    content: "✓ ";
+    color: #2cf7e7;
+    font-weight: 900;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2cf7e7;
+    color: #001111;
+    padding: 1rem 1.6rem;
+    border-radius: 999px;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 0 25px rgba(44, 247, 231, 0.35);
+    transition: 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 40px rgba(44, 247, 231, 0.6);
+  }
+
+  @media (max-width: 760px) {
+    .hero {
+      min-height: auto;
+      padding: 4rem 0;
+    }
+
+    .steps,
+    .next ul {
+      grid-template-columns: 1fr;
+    }
+
+    .next {
+      text-align: center;
+    }
+  }
+</style>
